@@ -1,4 +1,2 @@
-worker: python server.py
-worker: python config.py
+Web: python server.py
 worker: python favRetweet.py
-worker: python followFollowers.py
