@@ -39,4 +39,4 @@ def main(keywords):
     stream.filter(track=keywords, languages=["fr"])
 
 if __name__ == "__main__":
-    main(["#BabiDjaFoule", "#CIV225", "#IciOnParleIvoirien"])
+    main(["#TuVeuxTeBlorrr", "#CIV225", "#JeSuisEnTas"])
