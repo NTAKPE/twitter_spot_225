@@ -39,4 +39,4 @@ def main(keywords):
     stream.filter(track=keywords, languages=["fr"])
 
 if __name__ == "__main__":
-    main(["#CIV225"])
+    main(["#CIV225", "BlackHistoryMonth", "BHM2020"])
