@@ -4,6 +4,7 @@
 import tweepy
 from config import create_api
 import json
+import time
 
 class FavRetweetListener(tweepy.StreamListener):
     def __init__(self, api):
@@ -37,6 +38,10 @@ def main(keywords):
     tweets_listener = FavRetweetListener(api)
     stream = tweepy.Stream(api.auth, tweets_listener)
     stream.filter(track=keywords, languages=["fr"])
+
+    #Set the loop parameters
+    INTERVAL = 60*60/4
+    time.sleep(INTERVAL)
 
 if __name__ == "__main__":
     main(["#CIV225", "#COVID19", "#ivorianTouch"])
