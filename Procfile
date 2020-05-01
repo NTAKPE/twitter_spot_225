@@ -1,2 +1,2 @@
-Web: python server.py
+worker: python autoreply.py
 worker: python favRetweet.py
