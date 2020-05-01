@@ -17,13 +17,10 @@ def check_mentions(api, since_id):
     for tweet in tweepy.Cursor(api.mentions_timeline, since_id = since_id).items():
         new_since_id = max(tweet.id, new_since_id)
         
-        #Reply only to tweet that is not a reply
-        if tweet.in_reply_to_status_id is not None:
-            continue
-
         if not tweet.user.following:
             tweet.user.follow()
-        api.update_status(status= f"Hey @{tweet.user.name}\n{gen_proverb()}", in_reply_to_status_id=tweet.id)
+        api.update_status(status= f" {gen_proverb()}", in_reply_to_status_id = tweet.id,\
+            auto_populate_reply_metadata=True)
     return new_since_id
 
 def main():
