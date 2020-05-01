@@ -1,2 +1,2 @@
-worker: python autoreply.py
-worker: python favRetweet.py
+autoreply: python autoreply.py
+favretweet: python favRetweet.py
