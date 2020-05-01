@@ -1,7 +1,11 @@
 # /Users/jeremientakpe/TwitterSpotBot/config.py
 
 import tweepy
+import logging
 import os
+from generate_proverbs import getfamily, getproverb
+
+logger = logging.getLogger()
 
 def create_api():
     consumer_key = os.getenv("CONSUMER_KEY")
@@ -15,7 +19,14 @@ def create_api():
         wait_on_rate_limit_notify=True)
     try:
         api.verify_credentials()
-        print('Authentification Ok')
-    except :
-        print('Error during authentification')
+    except Exception as e :
+        logger.error("Error creating API", exc_info=True)
+        raise e
+    logger.info("API created")
     return api
+
+def gen_proverb():
+    category = getfamily()
+    proverb = getproverb(category[1])
+    foo = f"{proverb} _{category[0]}"
+    return foo
