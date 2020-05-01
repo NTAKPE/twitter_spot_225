@@ -41,11 +41,11 @@ def main(keywords):
     api = create_api()
     tweets_listener = FavRetweetListener(api)
     stream = tweepy.Stream(api.auth, tweets_listener)
-    stream.filter(track=keywords, languages=["fr"])
+    stream.filter(track=keywords, languages=["fr", "en"])
 
     #Wait 15 min before new loop through timeline
     INTERVAL = 60*60/4
     time.sleep(INTERVAL)
 
 if __name__ == "__main__":
-    main(["#CIV225", "#Amoulanfe" ,"#covid19CIV", "#ivorianTouch", "#opinion_citoyenne"])
+    main(["#CIV225", "#kebetu","#Amoulanfe" ,"#covid19CIV", "#ivorianTouch", "#opinion_citoyenne"])
