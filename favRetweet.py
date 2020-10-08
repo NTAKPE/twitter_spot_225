@@ -3,6 +3,7 @@
 
 import tweepy
 from config import create_api
+from data import kyw
 import json
 import time
 import logging
@@ -48,4 +49,4 @@ def main(keywords):
     time.sleep(INTERVAL)
 
 if __name__ == "__main__":
-    main(["#CIV225","#amoulanfe","Gbalet","Pulchérie","GBALET Pulcherie","Gbalet Pulcherie","#Drogba", "Drogba", "#wasexo", "#rapivoire", "rap ivoire", "#HumanRights"])
+    main(["#CIV225","Pulcherie Gbalet"]+kyw)
