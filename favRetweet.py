@@ -49,4 +49,5 @@ def main(keywords):
     time.sleep(INTERVAL)
 
 if __name__ == "__main__":
-    main(["#CIV225","Pulcherie Gbalet"]+kyw)
+    keywords = ["#CIV225","Pulcherie Gbalet"]+kyw
+    main(keywords)
