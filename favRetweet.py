@@ -48,4 +48,4 @@ def main(keywords):
     time.sleep(INTERVAL)
 
 if __name__ == "__main__":
-    main(["#CIV225","#statsciv", "statsciv"])
+    main(["#CIV225","#junteFrancaiseDehors", "#BurkinaFasoLibre"])
