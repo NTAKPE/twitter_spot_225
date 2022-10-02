@@ -24,7 +24,7 @@ class FavRetweetListener(tweepy.StreamListener):
         if not tweet.favorited:
             # Mark it as Liked, since we have not done it yet
             try:
-                tweet.favorite()
+                #tweet.favorite()
             except :
                 logger.error("Error on fav", exc_info=True)
         if not tweet.retweeted:
@@ -48,4 +48,4 @@ def main(keywords):
     time.sleep(INTERVAL)
 
 if __name__ == "__main__":
-    main(["#CIV225","#statsciv", "statsciv"])
+    main(["#CIV225","#Lwili", "#TT228", "#TT229", "#waxeco", "#juntefrancaise"])
